@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Domains\User\Resources\V1;
+
+use Illuminate\Http\Request;
+use Illuminate\Http\Resources\Json\JsonResource;
+
+class AuthMessageResource extends JsonResource
+{
+    public function toArray(Request $request): array
+    {
+        return [
+            'message' => $this['message'],
+        ];
+    }
+}
